@@ -1,26 +1,26 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himline LLC | AI Development & Intelligent Automation</title>
+    <title>Himline | Cloud Ecosystem Solutions - Building the Future with Intelligent Automation</title>
+    <link rel="icon" type="image/png" href="images/Himline_Logo_.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #16161f;
-            --accent-cyan: #00d4ff;
-            --accent-purple: #a855f7;
-            --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
-            --text-primary: #ffffff;
-            --text-secondary: #8b8b9e;
-            --text-muted: #5a5a6e;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --glow-cyan: 0 0 60px rgba(0, 212, 255, 0.3);
-            --glow-purple: 0 0 60px rgba(168, 85, 247, 0.3);
+            --primary-blue: #29ABE2;
+            --dark-blue: #1B3F8F;
+            --light-blue: #E8F7FC;
+            --lighter-blue: #F4FBFE;
+            --white: #FFFFFF;
+            --gray-100: #F8FAFC;
+            --gray-200: #E2E8F0;
+            --gray-600: #64748B;
+            --gray-800: #1E293B;
+            --shadow: 0 10px 40px rgba(41, 171, 226, 0.15);
+            --shadow-lg: 0 20px 60px rgba(41, 171, 226, 0.2);
         }
 
         * {
@@ -34,56 +34,11 @@
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--gray-800);
+            line-height: 1.7;
             overflow-x: hidden;
-        }
-
-        /* Animated Background */
-        .bg-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .bg-gradient-orb {
-            position: fixed;
-            width: 800px;
-            height: 800px;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.4;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .orb-1 {
-            top: -400px;
-            right: -200px;
-            background: radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .orb-2 {
-            bottom: -300px;
-            left: -200px;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
-            animation: float 25s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(50px, 30px) scale(1.1); }
         }
 
         /* Navigation */
@@ -93,42 +48,23 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 1.5rem 4rem;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(10, 10, 15, 0.8);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
+        .logo img {
+            height: 50px;
+            transition: transform 0.3s ease;
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--accent-gradient);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: var(--bg-primary);
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -138,7 +74,7 @@
         }
 
         .nav-links a {
-            color: var(--text-secondary);
+            color: var(--gray-800);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -147,7 +83,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent-cyan);
+            color: var(--primary-blue);
         }
 
         .nav-links a::after {
@@ -157,7 +93,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-gradient);
+            background: var(--primary-blue);
             transition: width 0.3s ease;
         }
 
@@ -176,92 +112,105 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            border: none;
         }
 
         .btn-primary {
-            background: var(--accent-gradient);
-            color: var(--bg-primary);
-            border: none;
-            box-shadow: var(--glow-cyan);
+            background: linear-gradient(135deg, var(--primary-blue), #1E96C8);
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(41, 171, 226, 0.35);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 80px rgba(0, 212, 255, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(41, 171, 226, 0.45);
         }
 
-        .btn-secondary {
+        .btn-outline {
             background: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
         }
 
-        .btn-secondary:hover {
-            border-color: var(--accent-cyan);
-            background: rgba(0, 212, 255, 0.1);
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
         }
 
         /* Hero Section */
         .hero {
-            position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 8rem 4rem;
-            z-index: 1;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--lighter-blue) 0%, var(--white) 50%, var(--light-blue) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(41, 171, 226, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            gap: 4rem;
         }
 
         .hero-content {
-            max-width: 800px;
+            flex: 1;
+            max-width: 600px;
+            z-index: 1;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.3);
+            padding: 0.5rem 1.25rem;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
             border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--accent-cyan);
-            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             animation: fadeInUp 0.8s ease;
         }
 
         .hero-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--accent-cyan);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+            content: '☁️';
         }
 
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             font-weight: 800;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
+            color: var(--dark-blue);
             animation: fadeInUp 0.8s ease 0.1s both;
         }
 
-        .hero h1 .gradient-text {
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero h1 span {
+            color: var(--primary-blue);
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 600px;
+            font-size: 1.15rem;
+            color: var(--gray-600);
             margin-bottom: 2.5rem;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
@@ -273,48 +222,24 @@
         }
 
         .hero-visual {
-            position: absolute;
-            right: 4rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 500px;
-            height: 500px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
             animation: fadeIn 1s ease 0.5s both;
         }
 
-        .neural-network {
+        .hero-visual img {
+            max-width: 500px;
             width: 100%;
-            height: 100%;
-            position: relative;
+            filter: drop-shadow(0 30px 60px rgba(41, 171, 226, 0.2));
+            animation: float 6s ease-in-out infinite;
         }
 
-        .node {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background: var(--accent-cyan);
-            border-radius: 50%;
-            box-shadow: 0 0 20px var(--accent-cyan);
-            animation: nodeGlow 3s ease-in-out infinite;
-        }
-
-        .node:nth-child(even) {
-            background: var(--accent-purple);
-            box-shadow: 0 0 20px var(--accent-purple);
-            animation-delay: 1.5s;
-        }
-
-        @keyframes nodeGlow {
-            0%, 100% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.3); opacity: 1; }
-        }
-
-        .connection {
-            position: absolute;
-            height: 1px;
-            background: linear-gradient(90deg, var(--accent-cyan), transparent);
-            transform-origin: left center;
-            opacity: 0.3;
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
 
         @keyframes fadeIn {
@@ -329,42 +254,41 @@
 
         /* Stats Section */
         .stats {
-            position: relative;
-            z-index: 1;
-            padding: 4rem;
+            padding: 4rem 5%;
+            background: var(--white);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
-            gap: 4rem;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            background: rgba(18, 18, 26, 0.5);
+            justify-content: space-around;
+            gap: 2rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary-blue), #1E96C8);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
         }
 
         .stat-item {
             text-align: center;
+            color: var(--white);
         }
 
         .stat-number {
             font-size: 3rem;
             font-weight: 800;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-family: 'JetBrains Mono', monospace;
         }
 
         .stat-label {
-            color: var(--text-secondary);
             font-size: 0.95rem;
+            opacity: 0.9;
             margin-top: 0.5rem;
         }
 
         /* Section Styles */
         section {
-            position: relative;
-            z-index: 1;
-            padding: 8rem 4rem;
+            padding: 6rem 5%;
         }
 
         .section-header {
@@ -373,29 +297,35 @@
             margin: 0 auto 4rem;
         }
 
+        .section-header img {
+            height: 120px;
+            margin-bottom: 1.5rem;
+        }
+
         .section-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            color: var(--primary-blue);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .section-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
+            color: var(--dark-blue);
             margin-bottom: 1rem;
         }
 
         .section-desc {
-            color: var(--text-secondary);
+            color: var(--gray-600);
             font-size: 1.1rem;
         }
 
         /* About Section */
         .about {
-            background: var(--bg-secondary);
+            background: var(--lighter-blue);
         }
 
         .about-grid {
@@ -409,11 +339,12 @@
 
         .about-content h3 {
             font-size: 2rem;
+            color: var(--dark-blue);
             margin-bottom: 1.5rem;
         }
 
         .about-content p {
-            color: var(--text-secondary);
+            color: var(--gray-600);
             margin-bottom: 1.5rem;
         }
 
@@ -428,59 +359,51 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .about-feature .icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(0, 212, 255, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-cyan);
-            font-size: 1.2rem;
+        .about-feature img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .about-feature span {
+            font-weight: 500;
+            color: var(--dark-blue);
         }
 
         .about-visual {
             position: relative;
-            height: 400px;
-            background: var(--bg-card);
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .code-block {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            padding: 2rem;
-            line-height: 1.8;
+        .about-visual img {
+            width: 100%;
+            max-width: 450px;
+            filter: drop-shadow(0 20px 40px rgba(41, 171, 226, 0.15));
         }
-
-        .code-block .keyword { color: var(--accent-purple); }
-        .code-block .function { color: var(--accent-cyan); }
-        .code-block .string { color: #4ade80; }
-        .code-block .comment { color: var(--text-muted); }
 
         /* Services Section */
+        .services {
+            background: var(--white);
+        }
+
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .service-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
             border-radius: 20px;
-            padding: 2.5rem;
+            padding: 2rem;
+            text-align: center;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -492,179 +415,190 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: var(--accent-gradient);
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), #1E96C8);
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            border-color: rgba(0, 212, 255, 0.3);
-            box-shadow: var(--glow-cyan);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
         }
 
         .service-card:hover::before {
             transform: scaleX(1);
         }
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 212, 255, 0.1);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
+        .service-card img {
+            width: 80px;
+            height: 80px;
             margin-bottom: 1.5rem;
-            transition: all 0.4s ease;
+            transition: transform 0.4s ease;
         }
 
-        .service-card:hover .service-icon {
-            background: var(--accent-gradient);
-            box-shadow: var(--glow-cyan);
+        .service-card:hover img {
+            transform: scale(1.1);
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: var(--dark-blue);
+            margin-bottom: 0.75rem;
         }
 
         .service-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-features {
-            list-style: none;
-        }
-
-        .service-features li {
-            color: var(--text-muted);
+            color: var(--gray-600);
             font-size: 0.9rem;
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
-        .service-features li::before {
-            content: '→';
-            color: var(--accent-cyan);
+        /* Ecosystem Sections */
+        .ecosystem {
+            background: var(--lighter-blue);
         }
 
-        /* Process Section */
-        .process {
-            background: var(--bg-secondary);
-        }
-
-        .process-timeline {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1000px;
+        .ecosystem-container {
+            max-width: 1200px;
             margin: 0 auto;
-            position: relative;
         }
 
-        .process-timeline::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 60px;
-            right: 60px;
-            height: 2px;
-            background: var(--border-color);
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            flex: 1;
-        }
-
-        .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--bg-card);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+        .ecosystem-header {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-            transition: all 0.4s ease;
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .process-step:hover .step-number {
-            background: var(--accent-gradient);
-            border-color: transparent;
-            color: var(--bg-primary);
-            box-shadow: var(--glow-cyan);
+        .ecosystem-header img {
+            height: 100px;
         }
 
-        .process-step h4 {
-            font-size: 1.2rem;
+        .ecosystem-header-text h2 {
+            font-size: 2rem;
+            color: var(--dark-blue);
             margin-bottom: 0.5rem;
         }
 
-        .process-step p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            max-width: 200px;
-            margin: 0 auto;
+        .ecosystem-header-text p {
+            color: var(--gray-600);
         }
 
-        /* Technologies Section */
-        .tech-grid {
+        .ecosystem-services {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
-            max-width: 1000px;
+        }
+
+        .eco-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .eco-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow);
+        }
+
+        .eco-card img {
+            width: 55px;
+            height: 55px;
+        }
+
+        .eco-card h4 {
+            color: var(--dark-blue);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .eco-card p {
+            color: var(--gray-600);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: linear-gradient(135deg, var(--primary-blue), #1E96C8);
+            color: var(--white);
+        }
+
+        .why-us .section-tag {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .why-us .section-title {
+            color: var(--white);
+        }
+
+        .why-us .section-desc {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .tech-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 2rem 1rem;
+        .why-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
             text-align: center;
             transition: all 0.3s ease;
         }
 
-        .tech-item:hover {
-            border-color: var(--accent-cyan);
+        .why-card:hover {
+            background: rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
         }
 
-        .tech-item .icon {
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
             font-size: 2rem;
+        }
+
+        .why-card h3 {
+            font-size: 1.2rem;
             margin-bottom: 0.75rem;
         }
 
-        .tech-item span {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
+        .why-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
 
         /* CTA Section */
         .cta {
+            background: var(--white);
             text-align: center;
-            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
         }
 
         .cta-box {
             max-width: 800px;
             margin: 0 auto;
             padding: 4rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+            background: linear-gradient(135deg, var(--lighter-blue), var(--light-blue));
             border-radius: 30px;
             position: relative;
             overflow: hidden;
@@ -673,21 +607,21 @@
         .cta-box::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
-            pointer-events: none;
+            top: -50%;
+            right: -30%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(41, 171, 226, 0.1) 0%, transparent 70%);
         }
 
         .cta h2 {
             font-size: 2.5rem;
+            color: var(--dark-blue);
             margin-bottom: 1rem;
         }
 
         .cta p {
-            color: var(--text-secondary);
+            color: var(--gray-600);
             font-size: 1.1rem;
             margin-bottom: 2rem;
         }
@@ -700,128 +634,242 @@
 
         /* Footer */
         footer {
-            position: relative;
-            z-index: 1;
-            padding: 4rem;
-            border-top: 1px solid var(--border-color);
-            background: var(--bg-secondary);
+            background: var(--gray-800);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
         }
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .footer-container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .footer-links {
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand img {
+            height: 45px;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-blue);
+        }
+
+        .footer-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: var(--accent-cyan);
+            color: var(--primary-blue);
         }
 
-        .footer-copyright {
-            color: var(--text-muted);
-            font-size: 0.85rem;
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .hero-visual {
-                display: none;
-            }
-            
-            .services-grid {
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .services-grid,
+            .ecosystem-services,
+            .why-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            nav {
-                padding: 1rem 2rem;
+            .mobile-menu-btn {
+                display: block;
             }
-            
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             }
-            
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            nav .btn {
+                display: none;
+            }
+
             .hero {
-                padding: 6rem 2rem;
+                padding: 7rem 5% 4rem;
             }
-            
+
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
-            .stats {
+
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-visual img {
+                max-width: 300px;
+            }
+
+            .stats-container {
                 flex-wrap: wrap;
                 gap: 2rem;
             }
-            
-            section {
-                padding: 4rem 2rem;
+
+            .stat-item {
+                flex: 1 1 40%;
             }
-            
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .ecosystem-services,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ecosystem-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
             .section-title {
                 font-size: 2rem;
             }
-            
-            .about-grid {
+
+            .footer-top {
                 grid-template-columns: 1fr;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-timeline {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .process-timeline::before {
-                display: none;
-            }
-            
-            .tech-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 1.5rem;
                 text-align: center;
+            }
+
+            .footer-brand {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .cta-box {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-grid"></div>
-    <div class="bg-gradient-orb orb-1"></div>
-    <div class="bg-gradient-orb orb-2"></div>
-
     <!-- Navigation -->
     <nav>
         <a href="#" class="logo">
-            <div class="logo-icon">H</div>
-            <span class="logo-text">HIMLINE</span>
+            <img src="images/HimlineLogowithName.png" alt="Himline">
         </a>
-        <ul class="nav-links">
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#process">Process</a></li>
+            <li><a href="#business">Business</a></li>
             <li><a href="#technology">Technology</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -830,39 +878,41 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                AI-Powered Innovation
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Cloud Ecosystem Solutions</div>
+                <h1>Building the <span>Future</span> with Intelligent Automation</h1>
+                <p>Himline empowers businesses with comprehensive cloud ecosystem solutions. From IaaS to SaaS, we deliver intelligent infrastructure that scales with your ambitions.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Explore Solutions →</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </div>
             </div>
-            <h1>Building the <span class="gradient-text">Future</span> with Intelligent Automation</h1>
-            <p>Himline LLC pioneers cutting-edge AI solutions and automation systems that transform how businesses operate, innovate, and scale in the digital age.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">Explore Solutions →</a>
-                <a href="#contact" class="btn btn-secondary">Schedule Consultation</a>
+            <div class="hero-visual">
+                <img src="images/Main-background.png" alt="Cloud Infrastructure">
             </div>
-        </div>
-        <div class="hero-visual">
-            <div class="neural-network" id="neural-network"></div>
         </div>
     </section>
 
     <!-- Stats Section -->
     <section class="stats">
-        <div class="stat-item">
-            <div class="stat-number">150+</div>
-            <div class="stat-label">Projects Delivered</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Client Satisfaction</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">45+</div>
-            <div class="stat-label">Enterprise Clients</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Support & Monitoring</div>
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime Guarantee</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Cloud Deployments</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Expert Support</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Enterprise Clients</div>
+            </div>
         </div>
     </section>
 
@@ -870,45 +920,31 @@
     <section class="about" id="about">
         <div class="about-grid">
             <div class="about-content">
-                <div class="section-tag">// About Himline</div>
-                <h3>Transforming Vision into Intelligent Reality</h3>
-                <p>At Himline LLC, we specialize in developing advanced AI systems and automation solutions that drive operational excellence. Our team of expert engineers and data scientists work at the intersection of innovation and practicality.</p>
-                <p>We believe in creating technology that not only automates processes but also learns, adapts, and evolves with your business needs. From machine learning models to end-to-end automation pipelines, we deliver solutions that matter.</p>
+                <div class="section-tag">About Himline</div>
+                <h3>Your Complete Cloud Ecosystem Partner</h3>
+                <p>Himline delivers end-to-end cloud solutions that transform how businesses operate. We combine cutting-edge technology with deep industry expertise to create intelligent automation systems that drive efficiency and growth.</p>
+                <p>Whether you need infrastructure, platforms, or software solutions, our comprehensive ecosystem approach ensures seamless integration and optimal performance across all your business operations.</p>
                 <div class="about-features">
                     <div class="about-feature">
-                        <div class="icon">⚡</div>
-                        <span>Rapid Development</span>
+                        <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
+                        <span>Infrastructure as a Service</span>
                     </div>
                     <div class="about-feature">
-                        <div class="icon">🔒</div>
+                        <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
+                        <span>Platform as a Service</span>
+                    </div>
+                    <div class="about-feature">
+                        <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
+                        <span>Software as a Service</span>
+                    </div>
+                    <div class="about-feature">
+                        <img src="images/Himline_Logo_-Security.png" alt="Security">
                         <span>Enterprise Security</span>
-                    </div>
-                    <div class="about-feature">
-                        <div class="icon">📊</div>
-                        <span>Data-Driven</span>
-                    </div>
-                    <div class="about-feature">
-                        <div class="icon">🔄</div>
-                        <span>Scalable Systems</span>
                     </div>
                 </div>
             </div>
             <div class="about-visual">
-                <div class="code-block">
-<span class="comment">// Himline AI Engine</span>
-<span class="keyword">class</span> <span class="function">HimlineAI</span> {
-  <span class="keyword">async</span> <span class="function">process</span>(data) {
-    <span class="keyword">const</span> insights = <span class="keyword">await</span> <span class="keyword">this</span>.analyze(data);
-    <span class="keyword">const</span> actions = <span class="keyword">this</span>.optimize(insights);
-    
-    <span class="keyword">return</span> {
-      predictions: <span class="keyword">this</span>.predict(insights),
-      automation: <span class="keyword">this</span>.automate(actions),
-      status: <span class="string">'intelligent'</span>
-    };
-  }
-}
-                </div>
+                <img src="images/Main-background.png" alt="Cloud Solutions">
             </div>
         </div>
     </section>
@@ -916,171 +952,223 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="section-header">
-            <div class="section-tag">// Our Services</div>
-            <h2 class="section-title">AI Solutions That Drive Results</h2>
-            <p class="section-desc">Comprehensive AI development and automation services tailored to your unique business challenges</p>
+            <div class="section-tag">Our Services</div>
+            <h2 class="section-title">Complete Cloud Solutions</h2>
+            <p class="section-desc">Comprehensive cloud services designed to power your digital transformation journey</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🧠</div>
-                <h3>AI Development</h3>
-                <p>Custom artificial intelligence solutions built from the ground up to solve your specific business challenges.</p>
-                <ul class="service-features">
-                    <li>Machine Learning Models</li>
-                    <li>Natural Language Processing</li>
-                    <li>Computer Vision Systems</li>
-                    <li>Predictive Analytics</li>
-                </ul>
+                <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
+                <h3>IaaS</h3>
+                <p>Scalable infrastructure resources on demand</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⚙️</div>
-                <h3>Process Automation</h3>
-                <p>Intelligent automation systems that streamline operations and eliminate repetitive manual tasks.</p>
-                <ul class="service-features">
-                    <li>Workflow Automation</li>
-                    <li>Robotic Process Automation</li>
-                    <li>Document Processing</li>
-                    <li>API Integrations</li>
-                </ul>
+                <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
+                <h3>PaaS</h3>
+                <p>Complete development platforms</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💬</div>
-                <h3>Conversational AI</h3>
-                <p>Advanced chatbots and virtual assistants that provide intelligent, human-like interactions.</p>
-                <ul class="service-features">
-                    <li>AI Chatbots</li>
-                    <li>Voice Assistants</li>
-                    <li>Customer Support Bots</li>
-                    <li>Multi-lingual Support</li>
-                </ul>
+                <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
+                <h3>SaaS</h3>
+                <p>Ready-to-use software solutions</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">📈</div>
-                <h3>Data Intelligence</h3>
-                <p>Transform raw data into actionable insights with advanced analytics and visualization solutions.</p>
-                <ul class="service-features">
-                    <li>Business Intelligence</li>
-                    <li>Real-time Analytics</li>
-                    <li>Data Visualization</li>
-                    <li>Reporting Dashboards</li>
-                </ul>
+                <img src="images/Himline_Logo_-VM.png" alt="Virtual Machines">
+                <h3>Virtual Machines</h3>
+                <p>Powerful virtualization technology</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🤖</div>
-                <h3>AI Agents</h3>
-                <p>Autonomous AI agents that can execute complex tasks and make intelligent decisions independently.</p>
-                <ul class="service-features">
-                    <li>Agentic Workflows</li>
-                    <li>Task Orchestration</li>
-                    <li>Decision Automation</li>
-                    <li>Multi-Agent Systems</li>
-                </ul>
+                <img src="images/Himline_Logo_-storage.png" alt="Cloud Storage">
+                <h3>Cloud Storage</h3>
+                <p>Secure and scalable data storage</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🔗</div>
-                <h3>System Integration</h3>
-                <p>Seamlessly connect AI capabilities with your existing enterprise systems and infrastructure.</p>
-                <ul class="service-features">
-                    <li>API Development</li>
-                    <li>Legacy Integration</li>
-                    <li>Cloud Migration</li>
-                    <li>Microservices Architecture</li>
-                </ul>
+                <img src="images/Himline_Logo_-Security.png" alt="Security">
+                <h3>Security</h3>
+                <p>Enterprise-grade protection</p>
+            </div>
+            <div class="service-card">
+                <img src="images/Himline_Logo_-internet.png" alt="Connectivity">
+                <h3>Connectivity</h3>
+                <p>High-speed network solutions</p>
+            </div>
+            <div class="service-card">
+                <img src="images/Himline_Logo_-Website.png" alt="Web Services">
+                <h3>Web Services</h3>
+                <p>Hosting and web applications</p>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process" id="process">
-        <div class="section-header">
-            <div class="section-tag">// Our Process</div>
-            <h2 class="section-title">From Concept to Deployment</h2>
-            <p class="section-desc">A proven methodology that ensures successful AI implementation every time</p>
-        </div>
-        <div class="process-timeline">
-            <div class="process-step">
-                <div class="step-number">01</div>
-                <h4>Discovery</h4>
-                <p>Deep dive into your business needs and define clear objectives</p>
+    <!-- Business Ecosystem Section -->
+    <section class="ecosystem" id="business">
+        <div class="ecosystem-container">
+            <div class="ecosystem-header">
+                <img src="images/Himline_Heading_Business_Eco.png" alt="Business Ecosystem">
+                <div class="ecosystem-header-text">
+                    <h2>Empower Your Business Operations</h2>
+                    <p>Integrated solutions that streamline communication, collaboration, and productivity</p>
+                </div>
             </div>
-            <div class="process-step">
-                <div class="step-number">02</div>
-                <h4>Strategy</h4>
-                <p>Design AI architecture and create detailed implementation roadmap</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">03</div>
-                <h4>Development</h4>
-                <p>Build and train AI models with iterative testing and refinement</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">04</div>
-                <h4>Integration</h4>
-                <p>Seamlessly deploy solutions into your existing infrastructure</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">05</div>
-                <h4>Optimize</h4>
-                <p>Continuous monitoring, learning, and improvement</p>
+            <div class="ecosystem-services">
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-Email.png" alt="Email">
+                    <div>
+                        <h4>Cloud Email</h4>
+                        <p>Professional email hosting</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-Phone.png" alt="Phone">
+                    <div>
+                        <h4>VoIP Phone</h4>
+                        <p>Cloud-based telephony</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-Meeting.png" alt="Meeting">
+                    <div>
+                        <h4>Video Meetings</h4>
+                        <p>HD video conferencing</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-User.png" alt="User Management">
+                    <div>
+                        <h4>User Management</h4>
+                        <p>Identity & access control</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-Computer.png" alt="Desktop">
+                    <div>
+                        <h4>Virtual Desktop</h4>
+                        <p>Work from anywhere</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-storage.png" alt="Storage">
+                    <div>
+                        <h4>File Storage</h4>
+                        <p>Secure cloud storage</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-Website.png" alt="Website">
+                    <div>
+                        <h4>Web Presence</h4>
+                        <p>Website & hosting</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-Security.png" alt="Security">
+                    <div>
+                        <h4>Data Protection</h4>
+                        <p>Backup & recovery</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Technologies Section -->
-    <section class="technologies" id="technology">
-        <div class="section-header">
-            <div class="section-tag">// Technology Stack</div>
-            <h2 class="section-title">Powered by Leading Technologies</h2>
-            <p class="section-desc">We leverage the most advanced tools and frameworks in the industry</p>
+    <!-- Technology Ecosystem Section -->
+    <section class="ecosystem" id="technology" style="background: var(--white);">
+        <div class="ecosystem-container">
+            <div class="ecosystem-header">
+                <img src="images/Himline_Heading_Technology_Eco.png" alt="Technology Ecosystem">
+                <div class="ecosystem-header-text">
+                    <h2>Advanced Technology Infrastructure</h2>
+                    <p>Enterprise-grade networking and infrastructure components for modern IT environments</p>
+                </div>
+            </div>
+            <div class="ecosystem-services">
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-router.png" alt="Router">
+                    <div>
+                        <h4>Cloud Routers</h4>
+                        <p>Managed routing services</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-switch.png" alt="Switch">
+                    <div>
+                        <h4>Virtual Switches</h4>
+                        <p>Software-defined networking</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-internet.png" alt="Internet">
+                    <div>
+                        <h4>Internet Gateway</h4>
+                        <p>High-speed connectivity</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-VM.png" alt="VM">
+                    <div>
+                        <h4>Virtualization</h4>
+                        <p>VM management platform</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
+                    <div>
+                        <h4>Infrastructure</h4>
+                        <p>Compute & resources</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
+                    <div>
+                        <h4>Platform Services</h4>
+                        <p>Development platforms</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
+                    <div>
+                        <h4>Applications</h4>
+                        <p>Cloud software suite</p>
+                    </div>
+                </div>
+                <div class="eco-card">
+                    <img src="images/Himline_Logo_-Security.png" alt="Security">
+                    <div>
+                        <h4>Network Security</h4>
+                        <p>Firewall & monitoring</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tech-grid">
-            <div class="tech-item">
-                <div class="icon">🐍</div>
-                <span>Python</span>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="section-header">
+            <div class="section-tag">Why Himline</div>
+            <h2 class="section-title">The Himline Advantage</h2>
+            <p class="section-desc">Discover why leading businesses trust Himline for their cloud ecosystem needs</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">🚀</div>
+                <h3>Rapid Deployment</h3>
+                <p>Get your cloud infrastructure up and running in minutes, not weeks</p>
             </div>
-            <div class="tech-item">
-                <div class="icon">🔥</div>
-                <span>PyTorch</span>
+            <div class="why-card">
+                <div class="why-icon">🔒</div>
+                <h3>Enterprise Security</h3>
+                <p>Bank-grade security protocols protecting your valuable data</p>
             </div>
-            <div class="tech-item">
-                <div class="icon">🧮</div>
-                <span>TensorFlow</span>
+            <div class="why-card">
+                <div class="why-icon">📈</div>
+                <h3>Infinite Scale</h3>
+                <p>Seamlessly scale resources up or down based on demand</p>
             </div>
-            <div class="tech-item">
-                <div class="icon">☁️</div>
-                <span>AWS</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">🌐</div>
-                <span>Azure AI</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">🚀</div>
-                <span>OpenAI</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">🐳</div>
-                <span>Docker</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">☸️</div>
-                <span>Kubernetes</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">📊</div>
-                <span>Spark</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">🗄️</div>
-                <span>MongoDB</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">⚡</div>
-                <span>FastAPI</span>
-            </div>
-            <div class="tech-item">
-                <div class="icon">🔄</div>
-                <span>LangChain</span>
+            <div class="why-card">
+                <div class="why-icon">💡</div>
+                <h3>Expert Support</h3>
+                <p>24/7 access to certified cloud architects and engineers</p>
             </div>
         </div>
     </section>
@@ -1088,87 +1176,72 @@
     <!-- CTA Section -->
     <section class="cta" id="contact">
         <div class="cta-box">
-            <div class="section-tag">// Get Started</div>
+            <div class="section-tag">Get Started Today</div>
             <h2>Ready to Transform Your Business?</h2>
-            <p>Let's discuss how Himline's AI solutions can accelerate your digital transformation journey and deliver measurable results.</p>
+            <p>Let's discuss how Himline's cloud ecosystem can accelerate your digital transformation and drive intelligent automation across your organization.</p>
             <div class="cta-buttons">
                 <a href="mailto:contact@himline.com" class="btn btn-primary">Contact Us →</a>
-                <a href="#" class="btn btn-secondary">View Case Studies</a>
+                <a href="#services" class="btn btn-outline">View Solutions</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">H</div>
-                <span class="logo-text">HIMLINE</span>
-            </a>
-            <div class="footer-links">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#process">Process</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/HimlineLogowithName.png" alt="Himline">
+                    <p>Building the future with intelligent automation. Himline delivers comprehensive cloud ecosystem solutions for modern businesses.</p>
+                    <div class="footer-social">
+                        <a href="#">in</a>
+                        <a href="#">𝕏</a>
+                        <a href="#">f</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">IaaS</a></li>
+                        <li><a href="#services">PaaS</a></li>
+                        <li><a href="#services">SaaS</a></li>
+                        <li><a href="#services">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#business">Business Ecosystem</a></li>
+                        <li><a href="#technology">Technology Ecosystem</a></li>
+                        <li><a href="#services">Cloud Storage</a></li>
+                        <li><a href="#services">Virtual Machines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-copyright">
-                © 2026 Himline LLC. All rights reserved.
+            <div class="footer-bottom">
+                <p>© 2026 Himline LLC. All rights reserved.</p>
+                <p>Building the Future with Intelligent Automation</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Generate Neural Network Visualization
-        function createNeuralNetwork() {
-            const container = document.getElementById('neural-network');
-            const nodes = [];
-            const nodeCount = 20;
-            
-            // Create nodes
-            for (let i = 0; i < nodeCount; i++) {
-                const node = document.createElement('div');
-                node.className = 'node';
-                const x = Math.random() * 400 + 50;
-                const y = Math.random() * 400 + 50;
-                node.style.left = x + 'px';
-                node.style.top = y + 'px';
-                node.style.animationDelay = (Math.random() * 3) + 's';
-                container.appendChild(node);
-                nodes.push({ x, y, element: node });
-            }
-            
-            // Create connections
-            for (let i = 0; i < nodes.length; i++) {
-                for (let j = i + 1; j < nodes.length; j++) {
-                    const distance = Math.sqrt(
-                        Math.pow(nodes[i].x - nodes[j].x, 2) + 
-                        Math.pow(nodes[i].y - nodes[j].y, 2)
-                    );
-                    
-                    if (distance < 150) {
-                        const connection = document.createElement('div');
-                        connection.className = 'connection';
-                        connection.style.left = nodes[i].x + 6 + 'px';
-                        connection.style.top = nodes[i].y + 6 + 'px';
-                        connection.style.width = distance + 'px';
-                        
-                        const angle = Math.atan2(
-                            nodes[j].y - nodes[i].y,
-                            nodes[j].x - nodes[i].x
-                        ) * 180 / Math.PI;
-                        
-                        connection.style.transform = `rotate(${angle}deg)`;
-                        container.appendChild(connection);
-                    }
-                }
-            }
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
         }
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', createNeuralNetwork);
-        
-        // Smooth scroll for navigation
+
+        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1178,15 +1251,28 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
                 }
             });
         });
-        
-        // Animate stats on scroll
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Intersection Observer for animations
         const observerOptions = {
-            threshold: 0.5
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1195,8 +1281,8 @@
                 }
             });
         }, observerOptions);
-        
-        document.querySelectorAll('.service-card, .process-step, .tech-item').forEach(el => {
+
+        document.querySelectorAll('.service-card, .eco-card, .why-card, .stat-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
