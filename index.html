@@ -3,150 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himline | Agentic AI & Intelligent Automation - Building the Future</title>
+    <title>Himline | Agentic AI & Intelligent Cloud Automation</title>
     <link rel="icon" type="image/png" href="images/Himline_Logo_.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="images/HimlineLogowithName.png" alt="Himline">
-        </a>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#mission">Our Mission</a></li>
-            <li><a href="#approach">Our Approach</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#business">Business</a></li>
-            <li><a href="#technology">Technology</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-primary">Get Started</a>
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="images/HimlineLogowithName.png" alt="Himline">
+            </a>
+            <a href="#mission">Mission</a>
+            <a href="#approach">Our Approach</a>
+            <a href="#services">Services</a>
+            <a href="#business">Business</a>
+            <a href="#technology">Technology</a>
+            <div class="nav-spacer"></div>
+            <a class="cta" href="#contact">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+                Get Started
+            </a>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">Agentic AI & Intelligent Automation</div>
-                <h1>Building the <span>Future</span> with Intelligent Automation</h1>
-                <p>Himline revolutionizes IT operations through Agentic AI, Infrastructure as Code, and Chatbot-driven Management. We don't just deploy technology—we automate the entire lifecycle with intelligent agents.</p>
-                <div class="hero-buttons">
-                    <a href="#approach" class="btn btn-primary">Discover Our Approach →</a>
-                    <a href="#contact" class="btn btn-outline">Talk to AI Agent</a>
+    <header class="hero" id="home">
+        <div class="hero-inner">
+            <div class="title-block">
+                <div class="eyebrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                    </svg>
+                    Agentic AI & Intelligent Automation
+                </div>
+                <h1>Building the <span class="highlight">Future</span> with Intelligent Automation</h1>
+                <h2>Cloud Infrastructure Managed by AI Agents, Deployed via Infrastructure as Code, Controlled Through Natural Conversation</h2>
+                <p class="lead">Himline revolutionizes IT operations through Agentic AI that thinks, decides, and acts autonomously. From provisioning to incident resolution, our intelligent agents handle complex workflows while you focus on innovation.</p>
+                <div class="hero-actions">
+                    <a class="cta cta-large" href="#approach">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="10 8 16 12 10 16 10 8"/>
+                        </svg>
+                        Discover Our Approach
+                    </a>
+                    <a class="cta cta-large cta-outline" href="#contact">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Talk to AI Agent
+                    </a>
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="images/Main-background.png" alt="Cloud Infrastructure">
+                <div class="mission-box">
+                    <div class="mission-node">
+                        <div class="mission-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Agentic AI</h4>
+                            <p>Autonomous agents that manage infrastructure</p>
+                        </div>
+                    </div>
+                    <div class="mission-node">
+                        <div class="mission-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Infrastructure as Code</h4>
+                            <p>Version-controlled, reproducible deployments</p>
+                        </div>
+                    </div>
+                    <div class="mission-node">
+                        <div class="mission-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Chatbot Management</h4>
+                            <p>Control everything through conversation</p>
+                        </div>
+                    </div>
+                    <div class="mission-node">
+                        <div class="mission-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Zero-Touch Operations</h4>
+                            <p>Self-healing, auto-scaling systems</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- Mission Statement -->
-    <section class="mission" id="mission">
-        <div class="mission-container">
-            <div class="mission-badge">Our Mission</div>
-            <h2>"Building the Future with <span>Intelligent Automation</span>"</h2>
-            <p class="mission-text">At Himline, we believe the future of IT isn't just about infrastructure—it's about intelligent systems that think, adapt, and act autonomously. Our mission is to transform every business operation through Agentic AI, making technology self-managing, self-healing, and infinitely scalable.</p>
-            <div class="mission-pillars">
-                <div class="pillar">
-                    <div class="pillar-icon">🤖</div>
-                    <h3>Agentic AI</h3>
-                    <p>AI agents that autonomously manage, monitor, and optimize your infrastructure</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">📝</div>
-                    <h3>Infrastructure as Code</h3>
-                    <p>Every component defined, versioned, and deployed through code</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">💬</div>
-                    <h3>Chatbot Management</h3>
-                    <p>Manage your entire infrastructure through natural conversation</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">⚡</div>
-                    <h3>Autonomous Operations</h3>
-                    <p>Self-healing systems that detect and resolve issues automatically</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Approach Section -->
-    <section class="approach" id="approach">
-        <div class="section-header">
-            <div class="section-tag">Our Revolutionary Approach</div>
-            <h2 class="section-title">The Himline Way: AI-First Infrastructure</h2>
-            <p class="section-desc">We've reimagined IT operations from the ground up with Agentic AI at the core</p>
-        </div>
-        <div class="approach-grid">
-            <a href="pages/agentic-ai.html" class="approach-card featured">
-                <div class="approach-icon">🤖</div>
-                <div class="approach-content">
-                    <h3>Agentic AI Integration</h3>
-                    <p>Our AI agents don't just respond—they anticipate, decide, and act. From provisioning resources to resolving incidents, our autonomous agents handle complex workflows.</p>
-                    <ul class="approach-features">
-                        <li>Autonomous decision-making</li>
-                        <li>Predictive issue resolution</li>
-                        <li>Continuous optimization</li>
-                        <li>Multi-system orchestration</li>
-                    </ul>
-                    <span class="learn-more">Learn More →</span>
-                </div>
-            </a>
-            <a href="pages/infrastructure-as-code.html" class="approach-card featured">
-                <div class="approach-icon">📝</div>
-                <div class="approach-content">
-                    <h3>Infrastructure as Code</h3>
-                    <p>Every server, network, and service is defined in code. Version-controlled, reproducible, and auditable. No more manual configurations.</p>
-                    <ul class="approach-features">
-                        <li>Terraform & Pulumi expertise</li>
-                        <li>GitOps workflows</li>
-                        <li>Immutable infrastructure</li>
-                        <li>Automated compliance</li>
-                    </ul>
-                    <span class="learn-more">Learn More →</span>
-                </div>
-            </a>
-            <a href="pages/chatbot-management.html" class="approach-card featured">
-                <div class="approach-icon">💬</div>
-                <div class="approach-content">
-                    <h3>Chatbot as Management Interface</h3>
-                    <p>Why learn complex dashboards when you can simply ask? Our AI chatbots let you deploy servers, check status, and manage environments through conversation.</p>
-                    <ul class="approach-features">
-                        <li>Natural language commands</li>
-                        <li>Slack/Teams integration</li>
-                        <li>Voice-enabled operations</li>
-                        <li>Contextual assistance</li>
-                    </ul>
-                    <span class="learn-more">Learn More →</span>
-                </div>
-            </a>
-            <a href="pages/automation.html" class="approach-card featured">
-                <div class="approach-icon">🔄</div>
-                <div class="approach-content">
-                    <h3>End-to-End Automation</h3>
-                    <p>From code commit to production deployment, from alert to resolution—every process is automated. Zero-touch operations that scale infinitely.</p>
-                    <ul class="approach-features">
-                        <li>CI/CD pipelines</li>
-                        <li>Auto-scaling systems</li>
-                        <li>Self-healing infrastructure</li>
-                        <li>Automated security patching</li>
-                    </ul>
-                    <span class="learn-more">Learn More →</span>
-                </div>
-            </a>
-        </div>
-    </section>
+    </header>
 
     <!-- Stats Section -->
     <section class="stats">
-        <div class="stats-container">
+        <div class="stats-grid">
             <div class="stat-item">
                 <div class="stat-number">95%</div>
                 <div class="stat-label">Tasks Automated</div>
@@ -157,7 +128,7 @@
             </div>
             <div class="stat-item">
                 <div class="stat-number">24/7</div>
-                <div class="stat-label">AI Agent Monitoring</div>
+                <div class="stat-label">AI Monitoring</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">Zero</div>
@@ -166,336 +137,553 @@
         </div>
     </section>
 
+    <!-- Mission Section -->
+    <section class="architecture" id="mission">
+        <h2>Our Mission: Building the Future with Intelligent Automation</h2>
+        <div class="arch-diagram">
+            <div class="arch-layers">
+                <div class="arch-layer">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/>
+                            </svg>
+                        </div>
+                        <h4>Agentic AI Layer</h4>
+                    </div>
+                    <div class="arch-components">
+                        <span class="arch-component">Autonomous Decision Making</span>
+                        <span class="arch-component">Predictive Analytics</span>
+                        <span class="arch-component">Self-Healing Systems</span>
+                        <span class="arch-component">Intelligent Orchestration</span>
+                    </div>
+                </div>
+                <div class="arch-connector">↓</div>
+                <div class="arch-layer">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h4>Infrastructure as Code Layer</h4>
+                    </div>
+                    <div class="arch-components">
+                        <span class="arch-component">Terraform</span>
+                        <span class="arch-component">Pulumi</span>
+                        <span class="arch-component">GitOps Workflows</span>
+                        <span class="arch-component">Policy as Code</span>
+                    </div>
+                </div>
+                <div class="arch-connector">↓</div>
+                <div class="arch-layer">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h4>Chatbot Management Interface</h4>
+                    </div>
+                    <div class="arch-components">
+                        <span class="arch-component">Natural Language Commands</span>
+                        <span class="arch-component">Slack/Teams Integration</span>
+                        <span class="arch-component">Voice Operations</span>
+                        <span class="arch-component">Contextual AI Assistant</span>
+                    </div>
+                </div>
+                <div class="arch-connector">↓</div>
+                <div class="arch-layer">
+                    <div class="arch-layer-header">
+                        <div class="arch-layer-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <h4>Cloud Infrastructure</h4>
+                    </div>
+                    <div class="arch-components">
+                        <span class="arch-component">IaaS</span>
+                        <span class="arch-component">PaaS</span>
+                        <span class="arch-component">SaaS</span>
+                        <span class="arch-component">Hybrid Cloud</span>
+                        <span class="arch-component">Edge Computing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="section" id="approach">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Himline Way: AI-First Infrastructure</h2>
+                <p class="lead">We've reimagined IT operations from the ground up with Agentic AI at the core</p>
+            </div>
+            <div class="use-cases-grid">
+                <a href="pages/agentic-ai.html" class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Agentic AI Integration</h3>
+                        <p>Our AI agents don't just respond—they anticipate, decide, and act. From provisioning resources to resolving incidents, autonomous agents handle complex workflows.</p>
+                        <div class="use-case-tags">
+                            <span class="use-case-tag">Autonomous</span>
+                            <span class="use-case-tag">Predictive</span>
+                            <span class="use-case-tag">Self-Healing</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="pages/infrastructure-as-code.html" class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Infrastructure as Code</h3>
+                        <p>Every server, network, and service defined in code. Version-controlled, reproducible, and auditable. No more manual configurations.</p>
+                        <div class="use-case-tags">
+                            <span class="use-case-tag">Terraform</span>
+                            <span class="use-case-tag">GitOps</span>
+                            <span class="use-case-tag">Immutable</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="pages/chatbot-management.html" class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Chatbot as Management Interface</h3>
+                        <p>Why learn complex dashboards? Our AI chatbots let you deploy servers, check status, and manage environments through natural conversation.</p>
+                        <div class="use-case-tags">
+                            <span class="use-case-tag">Natural Language</span>
+                            <span class="use-case-tag">Slack/Teams</span>
+                            <span class="use-case-tag">Voice</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="pages/automation.html" class="use-case-card">
+                    <div class="use-case-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>End-to-End Automation</h3>
+                        <p>From code commit to production deployment, from alert to resolution—every process automated. Zero-touch operations that scale infinitely.</p>
+                        <div class="use-case-tags">
+                            <span class="use-case-tag">CI/CD</span>
+                            <span class="use-case-tag">Auto-Scale</span>
+                            <span class="use-case-tag">Self-Healing</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-header">
-            <div class="section-tag">Our Services</div>
-            <h2 class="section-title">AI-Powered Cloud Solutions</h2>
-            <p class="section-desc">Every service enhanced with Agentic AI and automated through Infrastructure as Code</p>
-        </div>
-        <div class="services-grid">
-            <a href="pages/iaas.html" class="service-card">
-                <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
-                <h3>IaaS</h3>
-                <p>AI-managed infrastructure on demand</p>
-            </a>
-            <a href="pages/paas.html" class="service-card">
-                <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
-                <h3>PaaS</h3>
-                <p>Intelligent development platforms</p>
-            </a>
-            <a href="pages/saas.html" class="service-card">
-                <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
-                <h3>SaaS</h3>
-                <p>Smart software solutions</p>
-            </a>
-            <a href="pages/virtual-machines.html" class="service-card">
-                <img src="images/Himline_Logo_-VM.png" alt="Virtual Machines">
-                <h3>Virtual Machines</h3>
-                <p>Auto-scaling virtualization</p>
-            </a>
-            <a href="pages/cloud-storage.html" class="service-card">
-                <img src="images/Himline_Logo_-storage.png" alt="Cloud Storage">
-                <h3>Cloud Storage</h3>
-                <p>Intelligent data management</p>
-            </a>
-            <a href="pages/security.html" class="service-card">
-                <img src="images/Himline_Logo_-Security.png" alt="Security">
-                <h3>Security</h3>
-                <p>AI-driven threat protection</p>
-            </a>
-            <a href="pages/connectivity.html" class="service-card">
-                <img src="images/Himline_Logo_-internet.png" alt="Connectivity">
-                <h3>Connectivity</h3>
-                <p>Smart network optimization</p>
-            </a>
-            <a href="pages/web-services.html" class="service-card">
-                <img src="images/Himline_Logo_-Website.png" alt="Web Services">
-                <h3>Web Services</h3>
-                <p>Automated web deployment</p>
-            </a>
+    <section class="section" id="services" style="background: #fff;">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI-Powered Cloud Solutions</h2>
+                <p class="lead">Every service enhanced with Agentic AI and automated through Infrastructure as Code</p>
+            </div>
+            <div class="tech-grid">
+                <a href="pages/iaas.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <span class="tag">Infrastructure</span>
+                    <h3>IaaS</h3>
+                    <p>AI-managed infrastructure on demand. Auto-scaling, self-healing compute, storage, and networking.</p>
+                    <ul class="tech-features">
+                        <li>Predictive scaling</li>
+                        <li>Zero-downtime patching</li>
+                        <li>Cost optimization</li>
+                    </ul>
+                </a>
+                <a href="pages/paas.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="tag">Platform</span>
+                    <h3>PaaS</h3>
+                    <p>Intelligent development platforms with AI-assisted deployments and managed services.</p>
+                    <ul class="tech-features">
+                        <li>One-click deploy</li>
+                        <li>AI code review</li>
+                        <li>Managed databases</li>
+                    </ul>
+                </a>
+                <a href="pages/saas.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                        </svg>
+                    </div>
+                    <span class="tag">Software</span>
+                    <h3>SaaS</h3>
+                    <p>Smart business applications that learn, adapt, and improve continuously.</p>
+                    <ul class="tech-features">
+                        <li>AI-powered features</li>
+                        <li>Auto-updates</li>
+                        <li>Cross-app workflows</li>
+                    </ul>
+                </a>
+                <a href="pages/virtual-machines.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <span class="tag">Compute</span>
+                    <h3>Virtual Machines</h3>
+                    <p>Auto-scaling VMs with AI-optimized placement and self-healing capabilities.</p>
+                    <ul class="tech-features">
+                        <li>Instant provisioning</li>
+                        <li>Live migration</li>
+                        <li>Smart sizing</li>
+                    </ul>
+                </a>
+                <a href="pages/cloud-storage.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <span class="tag">Storage</span>
+                    <h3>Cloud Storage</h3>
+                    <p>Intelligent data management with AI-powered tiering and lifecycle automation.</p>
+                    <ul class="tech-features">
+                        <li>Auto-tiering</li>
+                        <li>Smart search</li>
+                        <li>Compliance automation</li>
+                    </ul>
+                </a>
+                <a href="pages/security.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span class="tag">Security</span>
+                    <h3>AI Security</h3>
+                    <p>Autonomous threat detection and response. AI agents that protect 24/7.</p>
+                    <ul class="tech-features">
+                        <li>Real-time detection</li>
+                        <li>Auto-remediation</li>
+                        <li>Zero trust</li>
+                    </ul>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Business Ecosystem Section -->
-    <section class="ecosystem" id="business">
-        <div class="ecosystem-container">
-            <div class="ecosystem-header">
-                <img src="images/Himline_Heading_Business_Eco.png" alt="Business Ecosystem">
-                <div class="ecosystem-header-text">
-                    <h2>Business Ecosystem</h2>
-                    <p>All business tools managed through conversational AI and automated workflows</p>
+    <!-- Business Ecosystem -->
+    <section class="section" id="business">
+        <div class="container">
+            <div class="section-header">
+                <h2>Business Ecosystem</h2>
+                <p class="lead">All business tools managed through conversational AI and automated workflows</p>
+            </div>
+            <div class="tech-grid">
+                <a href="pages/cloud-email.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3>Cloud Email</h3>
+                    <p>AI-powered email with smart filtering and auto-responses</p>
+                </a>
+                <a href="pages/voip-phone.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3>VoIP Phone</h3>
+                    <p>Intelligent call routing with AI transcription</p>
+                </a>
+                <a href="pages/video-meetings.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h3>Video Meetings</h3>
+                    <p>AI-enhanced conferencing with smart summaries</p>
+                </a>
+                <a href="pages/user-management.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>User Management</h3>
+                    <p>Automated identity and access control</p>
+                </a>
+                <a href="pages/virtual-desktop.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Virtual Desktop</h3>
+                    <p>Secure cloud desktops from anywhere</p>
+                </a>
+                <a href="pages/file-storage.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>File Storage</h3>
+                    <p>Intelligent file organization and search</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Ecosystem -->
+    <section class="section" id="technology" style="background: #fff;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technology Ecosystem</h2>
+                <p class="lead">Enterprise infrastructure fully defined in code and managed by AI agents</p>
+            </div>
+            <div class="tech-grid">
+                <a href="pages/cloud-routers.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3>Cloud Routers</h3>
+                    <p>Software-defined routing with AI optimization</p>
+                </a>
+                <a href="pages/virtual-switches.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <line x1="6" y1="3" x2="6" y2="15"/>
+                            <circle cx="18" cy="6" r="3"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <path d="M18 9a9 9 0 0 1-9 9"/>
+                        </svg>
+                    </div>
+                    <h3>Virtual Switches</h3>
+                    <p>Programmable networking infrastructure</p>
+                </a>
+                <a href="pages/internet-gateway.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3>Internet Gateway</h3>
+                    <p>Intelligent traffic management</p>
+                </a>
+                <a href="pages/virtualization.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="1" x2="9" y2="4"/>
+                            <line x1="15" y1="1" x2="15" y2="4"/>
+                            <line x1="9" y1="20" x2="9" y2="23"/>
+                            <line x1="15" y1="20" x2="15" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3>Virtualization</h3>
+                    <p>Automated VM lifecycle management</p>
+                </a>
+                <a href="pages/compute.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="1" x2="9" y2="4"/>
+                            <line x1="15" y1="1" x2="15" y2="4"/>
+                        </svg>
+                    </div>
+                    <h3>Compute</h3>
+                    <p>Auto-scaling resources on demand</p>
+                </a>
+                <a href="pages/network-security.html" class="tech-card">
+                    <div class="tech-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1B3F8F" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Network Security</h3>
+                    <p>AI-driven firewall and threat detection</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Himline?</h2>
+                <p class="lead">Experience the AI-first advantage in cloud infrastructure</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#29ABE2" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>10x Faster</h3>
+                    <p>Deploy infrastructure in minutes, not days. AI agents work around the clock.</p>
                 </div>
-            </div>
-            <div class="ecosystem-services">
-                <a href="pages/cloud-email.html" class="eco-card">
-                    <img src="images/Himline_Logo_-Email.png" alt="Email">
-                    <div>
-                        <h4>Cloud Email</h4>
-                        <p>AI-powered email management</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#29ABE2" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
                     </div>
-                </a>
-                <a href="pages/voip-phone.html" class="eco-card">
-                    <img src="images/Himline_Logo_-Phone.png" alt="Phone">
-                    <div>
-                        <h4>VoIP Phone</h4>
-                        <p>Intelligent call routing</p>
-                    </div>
-                </a>
-                <a href="pages/video-meetings.html" class="eco-card">
-                    <img src="images/Himline_Logo_-Meeting.png" alt="Meeting">
-                    <div>
-                        <h4>Video Meetings</h4>
-                        <p>AI-enhanced conferencing</p>
-                    </div>
-                </a>
-                <a href="pages/user-management.html" class="eco-card">
-                    <img src="images/Himline_Logo_-User.png" alt="User Management">
-                    <div>
-                        <h4>User Management</h4>
-                        <p>Automated identity control</p>
-                    </div>
-                </a>
-                <a href="pages/virtual-desktop.html" class="eco-card">
-                    <img src="images/Himline_Logo_-Computer.png" alt="Desktop">
-                    <div>
-                        <h4>Virtual Desktop</h4>
-                        <p>Smart workspace delivery</p>
-                    </div>
-                </a>
-                <a href="pages/file-storage.html" class="eco-card">
-                    <img src="images/Himline_Logo_-storage.png" alt="Storage">
-                    <div>
-                        <h4>File Storage</h4>
-                        <p>Intelligent file organization</p>
-                    </div>
-                </a>
-                <a href="pages/web-presence.html" class="eco-card">
-                    <img src="images/Himline_Logo_-Website.png" alt="Website">
-                    <div>
-                        <h4>Web Presence</h4>
-                        <p>Automated site management</p>
-                    </div>
-                </a>
-                <a href="pages/data-protection.html" class="eco-card">
-                    <img src="images/Himline_Logo_-Security.png" alt="Security">
-                    <div>
-                        <h4>Data Protection</h4>
-                        <p>AI-driven backup & recovery</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Ecosystem Section -->
-    <section class="ecosystem tech-eco" id="technology">
-        <div class="ecosystem-container">
-            <div class="ecosystem-header">
-                <img src="images/Himline_Heading_Technology_Eco.png" alt="Technology Ecosystem">
-                <div class="ecosystem-header-text">
-                    <h2>Technology Ecosystem</h2>
-                    <p>Enterprise infrastructure fully defined in code and managed by AI agents</p>
+                    <h3>Zero Errors</h3>
+                    <p>Infrastructure as Code eliminates human error. Every deployment is consistent.</p>
                 </div>
-            </div>
-            <div class="ecosystem-services">
-                <a href="pages/cloud-routers.html" class="eco-card">
-                    <img src="images/Himline_Logo_-router.png" alt="Router">
-                    <div>
-                        <h4>Cloud Routers</h4>
-                        <p>Software-defined routing</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#29ABE2" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
                     </div>
-                </a>
-                <a href="pages/virtual-switches.html" class="eco-card">
-                    <img src="images/Himline_Logo_-switch.png" alt="Switch">
-                    <div>
-                        <h4>Virtual Switches</h4>
-                        <p>Programmable networking</p>
+                    <h3>Natural Interface</h3>
+                    <p>Talk to your infrastructure. No complex dashboards or CLI memorization.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#29ABE2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
                     </div>
-                </a>
-                <a href="pages/internet-gateway.html" class="eco-card">
-                    <img src="images/Himline_Logo_-internet.png" alt="Internet">
-                    <div>
-                        <h4>Internet Gateway</h4>
-                        <p>Intelligent traffic management</p>
-                    </div>
-                </a>
-                <a href="pages/virtualization.html" class="eco-card">
-                    <img src="images/Himline_Logo_-VM.png" alt="VM">
-                    <div>
-                        <h4>Virtualization</h4>
-                        <p>Automated VM lifecycle</p>
-                    </div>
-                </a>
-                <a href="pages/compute.html" class="eco-card">
-                    <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
-                    <div>
-                        <h4>Compute</h4>
-                        <p>Auto-scaling resources</p>
-                    </div>
-                </a>
-                <a href="pages/platform-services.html" class="eco-card">
-                    <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
-                    <div>
-                        <h4>Platform Services</h4>
-                        <p>Developer automation</p>
-                    </div>
-                </a>
-                <a href="pages/applications.html" class="eco-card">
-                    <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
-                    <div>
-                        <h4>Applications</h4>
-                        <p>Self-updating software</p>
-                    </div>
-                </a>
-                <a href="pages/network-security.html" class="eco-card">
-                    <img src="images/Himline_Logo_-Security.png" alt="Security">
-                    <div>
-                        <h4>Network Security</h4>
-                        <p>AI threat detection</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="section-header">
-            <div class="section-tag">How It Works</div>
-            <h2 class="section-title">From Request to Reality in Seconds</h2>
-            <p class="section-desc">See how our Agentic AI transforms IT operations</p>
-        </div>
-        <div class="workflow">
-            <div class="workflow-step">
-                <div class="step-number">1</div>
-                <div class="step-icon">💬</div>
-                <h3>You Ask</h3>
-                <p>"Deploy a new web server"</p>
-            </div>
-            <div class="workflow-arrow">→</div>
-            <div class="workflow-step">
-                <div class="step-number">2</div>
-                <div class="step-icon">🤖</div>
-                <h3>AI Understands</h3>
-                <p>Agent plans infrastructure</p>
-            </div>
-            <div class="workflow-arrow">→</div>
-            <div class="workflow-step">
-                <div class="step-number">3</div>
-                <div class="step-icon">📝</div>
-                <h3>Code Generated</h3>
-                <p>IaC created automatically</p>
-            </div>
-            <div class="workflow-arrow">→</div>
-            <div class="workflow-step">
-                <div class="step-number">4</div>
-                <div class="step-icon">⚡</div>
-                <h3>Deployed</h3>
-                <p>Resources provisioned</p>
-            </div>
-            <div class="workflow-arrow">→</div>
-            <div class="workflow-step">
-                <div class="step-number">5</div>
-                <div class="step-icon">🔄</div>
-                <h3>Managed</h3>
-                <p>AI monitors & optimizes</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-us">
-        <div class="section-header">
-            <div class="section-tag">Why Himline</div>
-            <h2 class="section-title">The AI-First Advantage</h2>
-            <p class="section-desc">Experience the future of IT operations today</p>
-        </div>
-        <div class="why-grid">
-            <div class="why-card">
-                <div class="why-icon">🚀</div>
-                <h3>10x Faster</h3>
-                <p>Deploy infrastructure in minutes, not days. AI agents work around the clock.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">🔒</div>
-                <h3>Zero Errors</h3>
-                <p>Infrastructure as Code eliminates human error. Every deployment is consistent.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">💬</div>
-                <h3>Natural Interface</h3>
-                <p>Talk to your infrastructure. No complex dashboards or CLI memorization.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-icon">🤖</div>
-                <h3>Self-Healing</h3>
-                <p>AI agents detect and resolve issues before they impact your business.</p>
+                    <h3>24/7 Operations</h3>
+                    <p>AI agents detect and resolve issues before they impact your business.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta" id="contact">
-        <div class="cta-box">
-            <div class="section-tag">Start Your AI Journey</div>
-            <h2>Ready to Automate Your Future?</h2>
-            <p>Experience the power of Agentic AI, Infrastructure as Code, and Chatbot Management. Let our AI agents transform your IT operations.</p>
-            <div class="cta-buttons">
-                <a href="mailto:contact@himline.com" class="btn btn-primary">Talk to Our AI →</a>
-                <a href="pages/agentic-ai.html" class="btn btn-outline">Explore Technology</a>
+    <section class="cta-section" id="contact">
+        <div class="cta-content">
+            <h2>Ready to Build Your AI-Powered Infrastructure?</h2>
+            <p>Partner with Himline to design, deploy, and manage intelligent cloud systems that transform your IT operations. From strategy to production, our AI agents are with you every step of the way.</p>
+            <div class="cta-actions">
+                <a class="cta cta-large" href="mailto:contact@himline.com">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Schedule Consultation
+                </a>
+                <a class="cta cta-large cta-outline" href="pages/agentic-ai.html">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/>
+                    </svg>
+                    Explore Technology
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="images/HimlineLogowithName.png" alt="Himline">
-                    <p>Building the future with intelligent automation. Agentic AI, Infrastructure as Code, and Chatbot Management for the modern enterprise.</p>
-                    <div class="footer-social">
-                        <a href="#">in</a>
-                        <a href="#">𝕏</a>
-                        <a href="#">f</a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Our Approach</h4>
-                    <ul>
-                        <li><a href="pages/agentic-ai.html">Agentic AI</a></li>
-                        <li><a href="pages/infrastructure-as-code.html">Infrastructure as Code</a></li>
-                        <li><a href="pages/chatbot-management.html">Chatbot Management</a></li>
-                        <li><a href="pages/automation.html">Automation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="pages/iaas.html">IaaS</a></li>
-                        <li><a href="pages/paas.html">PaaS</a></li>
-                        <li><a href="pages/saas.html">SaaS</a></li>
-                        <li><a href="pages/security.html">Security</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="index.html#mission">Our Mission</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Himline LLC. All rights reserved.</p>
-                <p>Building the Future with Intelligent Automation</p>
-            </div>
+        <div class="container">
+            <p>© 2026 Himline LLC. All rights reserved. | Building the Future with Intelligent Automation</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = link.getAttribute('href');
+                const el = document.querySelector(id);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Highlight active navigation item on scroll
+        const sections = Array.from(document.querySelectorAll('section, header'));
+        const navLinks = Array.from(document.querySelectorAll('nav a:not(.cta):not(.nav-brand)'));
+        
+        const onScroll = () => {
+            const top = window.scrollY + 100;
+            let current = sections[0];
+            
+            for (const section of sections) {
+                if (section.offsetTop <= top) {
+                    current = section;
+                }
+            }
+            
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            const id = current.id ? '#' + current.id : null;
+            if (id) {
+                const activeLink = document.querySelector(`nav a[href="${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        };
+        
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+    </script>
 </body>
 </html>
