@@ -3,871 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himline | Cloud Ecosystem Solutions - Building the Future with Intelligent Automation</title>
+    <title>Himline | Agentic AI & Intelligent Automation - Building the Future</title>
     <link rel="icon" type="image/png" href="images/Himline_Logo_.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-blue: #29ABE2;
-            --dark-blue: #1B3F8F;
-            --light-blue: #E8F7FC;
-            --lighter-blue: #F4FBFE;
-            --white: #FFFFFF;
-            --gray-100: #F8FAFC;
-            --gray-200: #E2E8F0;
-            --gray-600: #64748B;
-            --gray-800: #1E293B;
-            --shadow: 0 10px 40px rgba(41, 171, 226, 0.15);
-            --shadow-lg: 0 20px 60px rgba(41, 171, 226, 0.2);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--white);
-            color: var(--gray-800);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .logo img {
-            height: 50px;
-            transition: transform 0.3s ease;
-        }
-
-        .logo img:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--gray-800);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-blue);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-blue);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .btn {
-            padding: 0.85rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: none;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-blue), #1E96C8);
-            color: var(--white);
-            box-shadow: 0 8px 25px rgba(41, 171, 226, 0.35);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(41, 171, 226, 0.45);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary-blue);
-            color: var(--white);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 8rem 5% 4rem;
-            background: linear-gradient(135deg, var(--lighter-blue) 0%, var(--white) 50%, var(--light-blue) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 80%;
-            height: 150%;
-            background: radial-gradient(circle, rgba(41, 171, 226, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            gap: 4rem;
-        }
-
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-            z-index: 1;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.25rem;
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: var(--primary-blue);
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero-badge::before {
-            content: '☁️';
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            color: var(--dark-blue);
-            animation: fadeInUp 0.8s ease 0.1s both;
-        }
-
-        .hero h1 span {
-            color: var(--primary-blue);
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--gray-600);
-            margin-bottom: 2.5rem;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-
-        .hero-visual {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            animation: fadeIn 1s ease 0.5s both;
-        }
-
-        .hero-visual img {
-            max-width: 500px;
-            width: 100%;
-            filter: drop-shadow(0 30px 60px rgba(41, 171, 226, 0.2));
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 4rem 5%;
-            background: var(--white);
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            gap: 2rem;
-            padding: 3rem;
-            background: linear-gradient(135deg, var(--primary-blue), #1E96C8);
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .stat-item {
-            text-align: center;
-            color: var(--white);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 6rem 5%;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-        }
-
-        .section-header img {
-            height: 120px;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-tag {
-            font-size: 0.9rem;
-            color: var(--primary-blue);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--dark-blue);
-            margin-bottom: 1rem;
-        }
-
-        .section-desc {
-            color: var(--gray-600);
-            font-size: 1.1rem;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--lighter-blue);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-content h3 {
-            font-size: 2rem;
-            color: var(--dark-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p {
-            color: var(--gray-600);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .about-feature {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem;
-            background: var(--white);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .about-feature img {
-            width: 50px;
-            height: 50px;
-        }
-
-        .about-feature span {
-            font-weight: 500;
-            color: var(--dark-blue);
-        }
-
-        .about-visual {
-            position: relative;
-        }
-
-        .about-visual img {
-            width: 100%;
-            max-width: 450px;
-            filter: drop-shadow(0 20px 40px rgba(41, 171, 226, 0.15));
-        }
-
-        /* Services Section */
-        .services {
-            background: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-blue), #1E96C8);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-blue);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 1.5rem;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .service-card h3 {
-            font-size: 1.1rem;
-            color: var(--dark-blue);
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card p {
-            color: var(--gray-600);
-            font-size: 0.9rem;
-        }
-
-        /* Ecosystem Sections */
-        .ecosystem {
-            background: var(--lighter-blue);
-        }
-
-        .ecosystem-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .ecosystem-header {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .ecosystem-header img {
-            height: 100px;
-        }
-
-        .ecosystem-header-text h2 {
-            font-size: 2rem;
-            color: var(--dark-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .ecosystem-header-text p {
-            color: var(--gray-600);
-        }
-
-        .ecosystem-services {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-
-        .eco-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .eco-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-blue);
-            box-shadow: var(--shadow);
-        }
-
-        .eco-card img {
-            width: 55px;
-            height: 55px;
-        }
-
-        .eco-card h4 {
-            color: var(--dark-blue);
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .eco-card p {
-            color: var(--gray-600);
-            font-size: 0.85rem;
-            margin-top: 0.25rem;
-        }
-
-        /* Why Choose Us */
-        .why-us {
-            background: linear-gradient(135deg, var(--primary-blue), #1E96C8);
-            color: var(--white);
-        }
-
-        .why-us .section-tag {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .why-us .section-title {
-            color: var(--white);
-        }
-
-        .why-us .section-desc {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .why-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .why-card:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .why-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-        }
-
-        .why-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .why-card p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: var(--white);
-            text-align: center;
-        }
-
-        .cta-box {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem;
-            background: linear-gradient(135deg, var(--lighter-blue), var(--light-blue));
-            border-radius: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-box::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 60%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(41, 171, 226, 0.1) 0%, transparent 70%);
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            color: var(--dark-blue);
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            color: var(--gray-600);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--gray-800);
-            color: var(--white);
-            padding: 4rem 5% 2rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-top {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-brand img {
-            height: 45px;
-            margin-bottom: 1.5rem;
-            filter: brightness(0) invert(1);
-        }
-
-        .footer-brand p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .footer-social a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            background: var(--primary-blue);
-        }
-
-        .footer-links h4 {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-blue);
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 2rem;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--dark-blue);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .services-grid,
-            .ecosystem-services,
-            .why-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            nav .btn {
-                display: none;
-            }
-
-            .hero {
-                padding: 7rem 5% 4rem;
-            }
-
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .hero-visual img {
-                max-width: 300px;
-            }
-
-            .stats-container {
-                flex-wrap: wrap;
-                gap: 2rem;
-            }
-
-            .stat-item {
-                flex: 1 1 40%;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .about-features {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid,
-            .ecosystem-services,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ecosystem-header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-brand {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-social {
-                justify-content: center;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .cta-box {
-                padding: 2.5rem 1.5rem;
-            }
-
-            .cta h2 {
-                font-size: 1.8rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <img src="images/HimlineLogowithName.png" alt="Himline">
         </a>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#about">About</a></li>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#approach">Our Approach</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#business">Business</a></li>
             <li><a href="#technology">Technology</a></li>
@@ -880,12 +32,12 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge">Cloud Ecosystem Solutions</div>
+                <div class="hero-badge">Agentic AI & Intelligent Automation</div>
                 <h1>Building the <span>Future</span> with Intelligent Automation</h1>
-                <p>Himline empowers businesses with comprehensive cloud ecosystem solutions. From IaaS to SaaS, we deliver intelligent infrastructure that scales with your ambitions.</p>
+                <p>Himline revolutionizes IT operations through Agentic AI, Infrastructure as Code, and Chatbot-driven Management. We don't just deploy technology—we automate the entire lifecycle with intelligent agents.</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Explore Solutions →</a>
-                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                    <a href="#approach" class="btn btn-primary">Discover Our Approach →</a>
+                    <a href="#contact" class="btn btn-outline">Talk to AI Agent</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -894,57 +46,122 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="stat-number">99.9%</div>
-                <div class="stat-label">Uptime Guarantee</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Cloud Deployments</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Expert Support</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Enterprise Clients</div>
+    <!-- Mission Statement -->
+    <section class="mission" id="mission">
+        <div class="mission-container">
+            <div class="mission-badge">Our Mission</div>
+            <h2>"Building the Future with <span>Intelligent Automation</span>"</h2>
+            <p class="mission-text">At Himline, we believe the future of IT isn't just about infrastructure—it's about intelligent systems that think, adapt, and act autonomously. Our mission is to transform every business operation through Agentic AI, making technology self-managing, self-healing, and infinitely scalable.</p>
+            <div class="mission-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">🤖</div>
+                    <h3>Agentic AI</h3>
+                    <p>AI agents that autonomously manage, monitor, and optimize your infrastructure</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">📝</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Every component defined, versioned, and deployed through code</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">💬</div>
+                    <h3>Chatbot Management</h3>
+                    <p>Manage your entire infrastructure through natural conversation</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">⚡</div>
+                    <h3>Autonomous Operations</h3>
+                    <p>Self-healing systems that detect and resolve issues automatically</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-grid">
-            <div class="about-content">
-                <div class="section-tag">About Himline</div>
-                <h3>Your Complete Cloud Ecosystem Partner</h3>
-                <p>Himline delivers end-to-end cloud solutions that transform how businesses operate. We combine cutting-edge technology with deep industry expertise to create intelligent automation systems that drive efficiency and growth.</p>
-                <p>Whether you need infrastructure, platforms, or software solutions, our comprehensive ecosystem approach ensures seamless integration and optimal performance across all your business operations.</p>
-                <div class="about-features">
-                    <div class="about-feature">
-                        <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
-                        <span>Infrastructure as a Service</span>
-                    </div>
-                    <div class="about-feature">
-                        <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
-                        <span>Platform as a Service</span>
-                    </div>
-                    <div class="about-feature">
-                        <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
-                        <span>Software as a Service</span>
-                    </div>
-                    <div class="about-feature">
-                        <img src="images/Himline_Logo_-Security.png" alt="Security">
-                        <span>Enterprise Security</span>
-                    </div>
+    <!-- Our Approach Section -->
+    <section class="approach" id="approach">
+        <div class="section-header">
+            <div class="section-tag">Our Revolutionary Approach</div>
+            <h2 class="section-title">The Himline Way: AI-First Infrastructure</h2>
+            <p class="section-desc">We've reimagined IT operations from the ground up with Agentic AI at the core</p>
+        </div>
+        <div class="approach-grid">
+            <a href="pages/agentic-ai.html" class="approach-card featured">
+                <div class="approach-icon">🤖</div>
+                <div class="approach-content">
+                    <h3>Agentic AI Integration</h3>
+                    <p>Our AI agents don't just respond—they anticipate, decide, and act. From provisioning resources to resolving incidents, our autonomous agents handle complex workflows.</p>
+                    <ul class="approach-features">
+                        <li>Autonomous decision-making</li>
+                        <li>Predictive issue resolution</li>
+                        <li>Continuous optimization</li>
+                        <li>Multi-system orchestration</li>
+                    </ul>
+                    <span class="learn-more">Learn More →</span>
                 </div>
+            </a>
+            <a href="pages/infrastructure-as-code.html" class="approach-card featured">
+                <div class="approach-icon">📝</div>
+                <div class="approach-content">
+                    <h3>Infrastructure as Code</h3>
+                    <p>Every server, network, and service is defined in code. Version-controlled, reproducible, and auditable. No more manual configurations.</p>
+                    <ul class="approach-features">
+                        <li>Terraform & Pulumi expertise</li>
+                        <li>GitOps workflows</li>
+                        <li>Immutable infrastructure</li>
+                        <li>Automated compliance</li>
+                    </ul>
+                    <span class="learn-more">Learn More →</span>
+                </div>
+            </a>
+            <a href="pages/chatbot-management.html" class="approach-card featured">
+                <div class="approach-icon">💬</div>
+                <div class="approach-content">
+                    <h3>Chatbot as Management Interface</h3>
+                    <p>Why learn complex dashboards when you can simply ask? Our AI chatbots let you deploy servers, check status, and manage environments through conversation.</p>
+                    <ul class="approach-features">
+                        <li>Natural language commands</li>
+                        <li>Slack/Teams integration</li>
+                        <li>Voice-enabled operations</li>
+                        <li>Contextual assistance</li>
+                    </ul>
+                    <span class="learn-more">Learn More →</span>
+                </div>
+            </a>
+            <a href="pages/automation.html" class="approach-card featured">
+                <div class="approach-icon">🔄</div>
+                <div class="approach-content">
+                    <h3>End-to-End Automation</h3>
+                    <p>From code commit to production deployment, from alert to resolution—every process is automated. Zero-touch operations that scale infinitely.</p>
+                    <ul class="approach-features">
+                        <li>CI/CD pipelines</li>
+                        <li>Auto-scaling systems</li>
+                        <li>Self-healing infrastructure</li>
+                        <li>Automated security patching</li>
+                    </ul>
+                    <span class="learn-more">Learn More →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Tasks Automated</div>
             </div>
-            <div class="about-visual">
-                <img src="images/Main-background.png" alt="Cloud Solutions">
+            <div class="stat-item">
+                <div class="stat-number">10x</div>
+                <div class="stat-label">Faster Deployments</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">AI Agent Monitoring</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Zero</div>
+                <div class="stat-label">Manual Interventions</div>
             </div>
         </div>
     </section>
@@ -953,50 +170,50 @@
     <section class="services" id="services">
         <div class="section-header">
             <div class="section-tag">Our Services</div>
-            <h2 class="section-title">Complete Cloud Solutions</h2>
-            <p class="section-desc">Comprehensive cloud services designed to power your digital transformation journey</p>
+            <h2 class="section-title">AI-Powered Cloud Solutions</h2>
+            <p class="section-desc">Every service enhanced with Agentic AI and automated through Infrastructure as Code</p>
         </div>
         <div class="services-grid">
-            <div class="service-card">
+            <a href="pages/iaas.html" class="service-card">
                 <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
                 <h3>IaaS</h3>
-                <p>Scalable infrastructure resources on demand</p>
-            </div>
-            <div class="service-card">
+                <p>AI-managed infrastructure on demand</p>
+            </a>
+            <a href="pages/paas.html" class="service-card">
                 <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
                 <h3>PaaS</h3>
-                <p>Complete development platforms</p>
-            </div>
-            <div class="service-card">
+                <p>Intelligent development platforms</p>
+            </a>
+            <a href="pages/saas.html" class="service-card">
                 <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
                 <h3>SaaS</h3>
-                <p>Ready-to-use software solutions</p>
-            </div>
-            <div class="service-card">
+                <p>Smart software solutions</p>
+            </a>
+            <a href="pages/virtual-machines.html" class="service-card">
                 <img src="images/Himline_Logo_-VM.png" alt="Virtual Machines">
                 <h3>Virtual Machines</h3>
-                <p>Powerful virtualization technology</p>
-            </div>
-            <div class="service-card">
+                <p>Auto-scaling virtualization</p>
+            </a>
+            <a href="pages/cloud-storage.html" class="service-card">
                 <img src="images/Himline_Logo_-storage.png" alt="Cloud Storage">
                 <h3>Cloud Storage</h3>
-                <p>Secure and scalable data storage</p>
-            </div>
-            <div class="service-card">
+                <p>Intelligent data management</p>
+            </a>
+            <a href="pages/security.html" class="service-card">
                 <img src="images/Himline_Logo_-Security.png" alt="Security">
                 <h3>Security</h3>
-                <p>Enterprise-grade protection</p>
-            </div>
-            <div class="service-card">
+                <p>AI-driven threat protection</p>
+            </a>
+            <a href="pages/connectivity.html" class="service-card">
                 <img src="images/Himline_Logo_-internet.png" alt="Connectivity">
                 <h3>Connectivity</h3>
-                <p>High-speed network solutions</p>
-            </div>
-            <div class="service-card">
+                <p>Smart network optimization</p>
+            </a>
+            <a href="pages/web-services.html" class="service-card">
                 <img src="images/Himline_Logo_-Website.png" alt="Web Services">
                 <h3>Web Services</h3>
-                <p>Hosting and web applications</p>
-            </div>
+                <p>Automated web deployment</p>
+            </a>
         </div>
     </section>
 
@@ -1006,138 +223,183 @@
             <div class="ecosystem-header">
                 <img src="images/Himline_Heading_Business_Eco.png" alt="Business Ecosystem">
                 <div class="ecosystem-header-text">
-                    <h2>Empower Your Business Operations</h2>
-                    <p>Integrated solutions that streamline communication, collaboration, and productivity</p>
+                    <h2>Business Ecosystem</h2>
+                    <p>All business tools managed through conversational AI and automated workflows</p>
                 </div>
             </div>
             <div class="ecosystem-services">
-                <div class="eco-card">
+                <a href="pages/cloud-email.html" class="eco-card">
                     <img src="images/Himline_Logo_-Email.png" alt="Email">
                     <div>
                         <h4>Cloud Email</h4>
-                        <p>Professional email hosting</p>
+                        <p>AI-powered email management</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/voip-phone.html" class="eco-card">
                     <img src="images/Himline_Logo_-Phone.png" alt="Phone">
                     <div>
                         <h4>VoIP Phone</h4>
-                        <p>Cloud-based telephony</p>
+                        <p>Intelligent call routing</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/video-meetings.html" class="eco-card">
                     <img src="images/Himline_Logo_-Meeting.png" alt="Meeting">
                     <div>
                         <h4>Video Meetings</h4>
-                        <p>HD video conferencing</p>
+                        <p>AI-enhanced conferencing</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/user-management.html" class="eco-card">
                     <img src="images/Himline_Logo_-User.png" alt="User Management">
                     <div>
                         <h4>User Management</h4>
-                        <p>Identity & access control</p>
+                        <p>Automated identity control</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/virtual-desktop.html" class="eco-card">
                     <img src="images/Himline_Logo_-Computer.png" alt="Desktop">
                     <div>
                         <h4>Virtual Desktop</h4>
-                        <p>Work from anywhere</p>
+                        <p>Smart workspace delivery</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/file-storage.html" class="eco-card">
                     <img src="images/Himline_Logo_-storage.png" alt="Storage">
                     <div>
                         <h4>File Storage</h4>
-                        <p>Secure cloud storage</p>
+                        <p>Intelligent file organization</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/web-presence.html" class="eco-card">
                     <img src="images/Himline_Logo_-Website.png" alt="Website">
                     <div>
                         <h4>Web Presence</h4>
-                        <p>Website & hosting</p>
+                        <p>Automated site management</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/data-protection.html" class="eco-card">
                     <img src="images/Himline_Logo_-Security.png" alt="Security">
                     <div>
                         <h4>Data Protection</h4>
-                        <p>Backup & recovery</p>
+                        <p>AI-driven backup & recovery</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Technology Ecosystem Section -->
-    <section class="ecosystem" id="technology" style="background: var(--white);">
+    <section class="ecosystem tech-eco" id="technology">
         <div class="ecosystem-container">
             <div class="ecosystem-header">
                 <img src="images/Himline_Heading_Technology_Eco.png" alt="Technology Ecosystem">
                 <div class="ecosystem-header-text">
-                    <h2>Advanced Technology Infrastructure</h2>
-                    <p>Enterprise-grade networking and infrastructure components for modern IT environments</p>
+                    <h2>Technology Ecosystem</h2>
+                    <p>Enterprise infrastructure fully defined in code and managed by AI agents</p>
                 </div>
             </div>
             <div class="ecosystem-services">
-                <div class="eco-card">
+                <a href="pages/cloud-routers.html" class="eco-card">
                     <img src="images/Himline_Logo_-router.png" alt="Router">
                     <div>
                         <h4>Cloud Routers</h4>
-                        <p>Managed routing services</p>
+                        <p>Software-defined routing</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/virtual-switches.html" class="eco-card">
                     <img src="images/Himline_Logo_-switch.png" alt="Switch">
                     <div>
                         <h4>Virtual Switches</h4>
-                        <p>Software-defined networking</p>
+                        <p>Programmable networking</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/internet-gateway.html" class="eco-card">
                     <img src="images/Himline_Logo_-internet.png" alt="Internet">
                     <div>
                         <h4>Internet Gateway</h4>
-                        <p>High-speed connectivity</p>
+                        <p>Intelligent traffic management</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/virtualization.html" class="eco-card">
                     <img src="images/Himline_Logo_-VM.png" alt="VM">
                     <div>
                         <h4>Virtualization</h4>
-                        <p>VM management platform</p>
+                        <p>Automated VM lifecycle</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/compute.html" class="eco-card">
                     <img src="images/Himline_Logo_-IaaS.png" alt="IaaS">
                     <div>
-                        <h4>Infrastructure</h4>
-                        <p>Compute & resources</p>
+                        <h4>Compute</h4>
+                        <p>Auto-scaling resources</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/platform-services.html" class="eco-card">
                     <img src="images/Himline_Logo_-PaaS.png" alt="PaaS">
                     <div>
                         <h4>Platform Services</h4>
-                        <p>Development platforms</p>
+                        <p>Developer automation</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/applications.html" class="eco-card">
                     <img src="images/Himline_Logo_-SaaS.png" alt="SaaS">
                     <div>
                         <h4>Applications</h4>
-                        <p>Cloud software suite</p>
+                        <p>Self-updating software</p>
                     </div>
-                </div>
-                <div class="eco-card">
+                </a>
+                <a href="pages/network-security.html" class="eco-card">
                     <img src="images/Himline_Logo_-Security.png" alt="Security">
                     <div>
                         <h4>Network Security</h4>
-                        <p>Firewall & monitoring</p>
+                        <p>AI threat detection</p>
                     </div>
-                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <div class="section-tag">How It Works</div>
+            <h2 class="section-title">From Request to Reality in Seconds</h2>
+            <p class="section-desc">See how our Agentic AI transforms IT operations</p>
+        </div>
+        <div class="workflow">
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <div class="step-icon">💬</div>
+                <h3>You Ask</h3>
+                <p>"Deploy a new web server"</p>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <div class="step-icon">🤖</div>
+                <h3>AI Understands</h3>
+                <p>Agent plans infrastructure</p>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <div class="step-icon">📝</div>
+                <h3>Code Generated</h3>
+                <p>IaC created automatically</p>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <div class="step-number">4</div>
+                <div class="step-icon">⚡</div>
+                <h3>Deployed</h3>
+                <p>Resources provisioned</p>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <div class="step-number">5</div>
+                <div class="step-icon">🔄</div>
+                <h3>Managed</h3>
+                <p>AI monitors & optimizes</p>
             </div>
         </div>
     </section>
@@ -1146,29 +408,29 @@
     <section class="why-us">
         <div class="section-header">
             <div class="section-tag">Why Himline</div>
-            <h2 class="section-title">The Himline Advantage</h2>
-            <p class="section-desc">Discover why leading businesses trust Himline for their cloud ecosystem needs</p>
+            <h2 class="section-title">The AI-First Advantage</h2>
+            <p class="section-desc">Experience the future of IT operations today</p>
         </div>
         <div class="why-grid">
             <div class="why-card">
                 <div class="why-icon">🚀</div>
-                <h3>Rapid Deployment</h3>
-                <p>Get your cloud infrastructure up and running in minutes, not weeks</p>
+                <h3>10x Faster</h3>
+                <p>Deploy infrastructure in minutes, not days. AI agents work around the clock.</p>
             </div>
             <div class="why-card">
                 <div class="why-icon">🔒</div>
-                <h3>Enterprise Security</h3>
-                <p>Bank-grade security protocols protecting your valuable data</p>
+                <h3>Zero Errors</h3>
+                <p>Infrastructure as Code eliminates human error. Every deployment is consistent.</p>
             </div>
             <div class="why-card">
-                <div class="why-icon">📈</div>
-                <h3>Infinite Scale</h3>
-                <p>Seamlessly scale resources up or down based on demand</p>
+                <div class="why-icon">💬</div>
+                <h3>Natural Interface</h3>
+                <p>Talk to your infrastructure. No complex dashboards or CLI memorization.</p>
             </div>
             <div class="why-card">
-                <div class="why-icon">💡</div>
-                <h3>Expert Support</h3>
-                <p>24/7 access to certified cloud architects and engineers</p>
+                <div class="why-icon">🤖</div>
+                <h3>Self-Healing</h3>
+                <p>AI agents detect and resolve issues before they impact your business.</p>
             </div>
         </div>
     </section>
@@ -1176,12 +438,12 @@
     <!-- CTA Section -->
     <section class="cta" id="contact">
         <div class="cta-box">
-            <div class="section-tag">Get Started Today</div>
-            <h2>Ready to Transform Your Business?</h2>
-            <p>Let's discuss how Himline's cloud ecosystem can accelerate your digital transformation and drive intelligent automation across your organization.</p>
+            <div class="section-tag">Start Your AI Journey</div>
+            <h2>Ready to Automate Your Future?</h2>
+            <p>Experience the power of Agentic AI, Infrastructure as Code, and Chatbot Management. Let our AI agents transform your IT operations.</p>
             <div class="cta-buttons">
-                <a href="mailto:contact@himline.com" class="btn btn-primary">Contact Us →</a>
-                <a href="#services" class="btn btn-outline">View Solutions</a>
+                <a href="mailto:contact@himline.com" class="btn btn-primary">Talk to Our AI →</a>
+                <a href="pages/agentic-ai.html" class="btn btn-outline">Explore Technology</a>
             </div>
         </div>
     </section>
@@ -1192,7 +454,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <img src="images/HimlineLogowithName.png" alt="Himline">
-                    <p>Building the future with intelligent automation. Himline delivers comprehensive cloud ecosystem solutions for modern businesses.</p>
+                    <p>Building the future with intelligent automation. Agentic AI, Infrastructure as Code, and Chatbot Management for the modern enterprise.</p>
                     <div class="footer-social">
                         <a href="#">in</a>
                         <a href="#">𝕏</a>
@@ -1200,28 +462,28 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Services</h4>
+                    <h4>Our Approach</h4>
                     <ul>
-                        <li><a href="#services">IaaS</a></li>
-                        <li><a href="#services">PaaS</a></li>
-                        <li><a href="#services">SaaS</a></li>
-                        <li><a href="#services">Security</a></li>
+                        <li><a href="pages/agentic-ai.html">Agentic AI</a></li>
+                        <li><a href="pages/infrastructure-as-code.html">Infrastructure as Code</a></li>
+                        <li><a href="pages/chatbot-management.html">Chatbot Management</a></li>
+                        <li><a href="pages/automation.html">Automation</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Solutions</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="#business">Business Ecosystem</a></li>
-                        <li><a href="#technology">Technology Ecosystem</a></li>
-                        <li><a href="#services">Cloud Storage</a></li>
-                        <li><a href="#services">Virtual Machines</a></li>
+                        <li><a href="pages/iaas.html">IaaS</a></li>
+                        <li><a href="pages/paas.html">PaaS</a></li>
+                        <li><a href="pages/saas.html">SaaS</a></li>
+                        <li><a href="pages/security.html">Security</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html#mission">Our Mission</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
@@ -1234,60 +496,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    document.getElementById('navLinks').classList.remove('active');
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-            } else {
-                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
-            }
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .eco-card, .why-card, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
